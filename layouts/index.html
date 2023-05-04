@@ -1,4 +1,20 @@
 {{ define "main" }}
-{{ .Content }}
-{{- partial "posts.html" . -}}
+<article>
+    <header id="post-header">
+        {{ if eq .RelPermalink "/" }}
+            <h1 style="visibility:hidden;">&nbsp;</h1>
+        {{ end }}
+    </header>
+    <div class="landing-page-content">
+        <div class="text-content">
+            {{- partial "about_excerpt.html" . -}}
+            {{ .Content }}
+        </div>
+        <div class="image-content image-accent">
+            <div class="image-wrapper">
+                <img src="{{ "img/picture.jpeg" | absURL }}" alt="Your Name" class="profile-image">
+            </div>
+        </div>        
+    </div>
+</article>
 {{ end }}
