@@ -6,15 +6,27 @@
         {{ end }}
     </header>
     <div class="landing-page-content">
-        <div class="text-content">
-            {{- partial "about_excerpt.html" . -}}
-            {{ .Content }}
-        </div>
         <div class="image-content image-accent">
             <div class="image-wrapper">
                 <img src="{{ "img/picture.jpeg" | absURL }}" alt="Your Name" class="profile-image">
             </div>
-        </div>        
+        </div>      
+        <div class="text-content">
+            <!-- {{- partial "about_excerpt.html" . -}}
+            {{ .Content }} -->    
+        <p>I am a sixth year Ph.D. student in Economics at Princeton University. 
+        I work in the intersection of Industrial Organization and Public Economics. 
+        My research focuses on the role that information plays in the decisions made by consumers, 
+        firms and the government -- and its implications for the design of public policies.</p>
+
+        <p> My job market paper analyzes the impact of intermediation in insurance markets with
+            choice frictions. 
+        </p>
+
+        <p>
+            You can reach me at eboehm at princeton dot edu.
+        </p>
+        </div>  
     </div>
 </article>
 {{ end }}
