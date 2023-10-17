@@ -13,9 +13,17 @@ body {
     color: #313a3d;
     width: 100%;
     margin: 0 auto;
+    /* padding: 0 16px; */
     padding: 0 16px;
+    /* max-width: 900px; */
     line-height: 1.6;
     overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.max-width-text {
+    max-width: 700px; /* Adjust the value to set the desired maximum width */
+    margin: auto 0; /* Centers the content within the maximum width */
 }
 
 header#banner {
@@ -40,6 +48,7 @@ header#banner h2 {
 
 header#banner nav {
     display: inline-block;
+    margin-left: auto;
 }
 
 header#banner nav ul {
