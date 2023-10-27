@@ -34,7 +34,7 @@ header#banner {
     display: flex; /* Use flexbox to control the positioning */
     justify-content: space-between; /* Move the elements to each end */
     align-items: center; /* Vertically center the content */
-    border-bottom: 4px solid #014f9c; /* Add a 2px solid red (you can change the color and width) border at the bottom */
+    border-bottom: 4px solid #014f9c; /* Add a 2px solid blue (you can change the color and width) border at the bottom */
 }
 
 header#banner a {
