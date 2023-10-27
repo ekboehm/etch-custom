@@ -1,6 +1,7 @@
-{{ if not (eq .Site.Params.dark "on") -}}
+{{ if false -}}
 @media (prefers-color-scheme: dark) {
-{{ end -}}
+{{- end }}
+
 html {
     scrollbar-color: #6c6c6c #2e2e2e;
 }
@@ -48,6 +49,7 @@ main#content ul#posts li a:hover {
 main#content header#post-header div {
     color: #a7a7a7;
 }
-{{- if not (eq .Site.Params.dark "on") -}}
+
+{{- if false -}}
 }
 {{- end -}}

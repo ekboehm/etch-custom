@@ -53,8 +53,8 @@ header#banner nav a:hover {
 
 header#banner h2 {
     display: inline;
-    font-size: 21px;
-    font-size: 2.1rem;
+    /* font-size: 21px;
+    font-size: 2.1rem; */
     margin: 0 8px 0 0;
 }
 
@@ -137,6 +137,7 @@ a.new-tab {
 
 /* Style for inactive links (make them gray) */
 ul li a:not(.active) {
+    /* color: rgb(86, 85, 85); */
     color: gray;
 } 
 
