@@ -4,11 +4,12 @@
 
 html {
     font-size: 62.5%;
+    overflow-y: scroll;
 }
 
 body {
     font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #313a3d;
     width: 100%;
@@ -22,20 +23,31 @@ body {
 }
 
 .max-width-text {
-    max-width: 700px; /* Adjust the value to set the desired maximum width */
+    max-width: 900px; /* Adjust the value to set the desired maximum width */
     margin: auto 0; /* Centers the content within the maximum width */
+    text-align: justify;
+    font-size: 1.6rem;
 }
 
 header#banner {
     margin: 25px 0;
+    display: flex; /* Use flexbox to control the positioning */
+    justify-content: space-between; /* Move the elements to each end */
+    align-items: center; /* Vertically center the content */
+    border-bottom: 4px solid #014f9c; /* Add a 2px solid red (you can change the color and width) border at the bottom */
 }
 
 header#banner a {
+    /* color: #313a3d; */
+    text-decoration: none;
+}
+
+header#banner h2 a {
     color: #313a3d;
     text-decoration: none;
 }
 
-header#banner a:hover {
+header#banner nav a:hover {
     text-decoration: underline;
 }
 
@@ -53,7 +65,7 @@ header#banner nav {
 
 header#banner nav ul {
     list-style-type: none;
-    font-size: 1.05em;
+    font-size: 1.25em;
     /* text-transform: lowercase; */
     margin: 0;
     padding: 0;
@@ -61,15 +73,15 @@ header#banner nav ul {
 
 header#banner nav ul li {
     display: inline;
-    margin: 0 3px;
+    margin: 0 7px;
 }
 
 header#banner nav ul li a {
-    color: #454545;
+    /* color: #454545; */
 }
 
 main#content a {
-    color: #007dfa;
+    color: #0453a2;
     text-decoration: none;
 }
 
@@ -79,7 +91,6 @@ main#content a:hover {
 
 main#content h1,
 main#content h2,
-main#content h3,
 main#content h4,
 main#content h5,
 main#content h6 {
@@ -100,6 +111,34 @@ main#content h5 + p,
 main#content h6 + p {
     margin-top: 5px;
 }
+
+h3 {
+    font-variant: small-caps;
+    margin-bottom: 20px; /* Add space below h3 elements */
+}
+
+h3::after {
+    content: "";
+    display: block;
+    width: 600px; /* Adjust the width of the line as needed */
+    border-bottom: 1px solid #e0dddd; /* Change the width and color of the line as desired */
+}
+
+a.new-tab {
+    target-new: tab;
+}
+
+.active {
+    /* Define your desired styles for the active element */
+    color: #014f9c; /* For example, change the text color to blue */
+    /* font-weight: bold; Make the text bold */
+    /* Add any other styles you want */
+}
+
+/* Style for inactive links (make them gray) */
+ul li a:not(.active) {
+    color: gray;
+} 
 
 main#content p {
     color: #394548;
@@ -307,7 +346,7 @@ footer#footer {
   
 .landing-page-content {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-columns: 1fr 2fr;
     grid-gap: 5rem;
     padding: 0rem;
 }

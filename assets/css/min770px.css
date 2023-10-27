@@ -1,6 +1,6 @@
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
 body {
-    width: 1000px;
+    width: 900px;
     /* line-height: 1.5; */
 }
 
@@ -52,9 +52,17 @@ main#content pre {
 }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 899) {
     body {
-        width: calc(600px + (400 * (100vw - 768px) / 400)); /* This will proportionally increase the width */
+        width: calc(600px + (300 * (100vw - 768px) / 300)); /* This will proportionally increase the width */
+    }
+    header#banner h2 {
+        font-size: 2.4rem;
+    }
+
+    header#banner nav {
+        font-size: 1.8rem;
+
     }
 }
 
@@ -69,6 +77,11 @@ main#content pre {
         margin-right: auto;
     }
     header#banner h2 {
-        font-size: 2.1rem;
+        font-size: 2.4rem;
+    }
+
+    header#banner nav {
+        font-size: 1.5rem;
+
     }
 }
