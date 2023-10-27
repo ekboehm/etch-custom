@@ -64,6 +64,13 @@ main#content pre {
         font-size: 1.8rem;
 
     }
+
+    h3::after {
+        content: "";
+        display: block;
+        width: 66.67%;  /* Adjust the width of the line as needed */
+        border-bottom: 1px solid #e0dddd; /* Change the width and color of the line as desired */
+    }
 }
 
 /* Narrow width ("mobile") */
@@ -92,5 +99,12 @@ main#content pre {
         margin-left: 0;
         font-size: 1.5rem;
         display: block;
+    }
+
+    h3::after {
+        content: "";
+        display: block;
+        width: 66.67%; /* Adjust the width of the line as needed */
+        border-bottom: 1px solid #e0dddd; /* Change the width and color of the line as desired */
     }
 }
