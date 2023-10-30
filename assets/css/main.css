@@ -26,7 +26,7 @@ body {
     max-width: 900px; /* Adjust the value to set the desired maximum width */
     margin: auto 0; /* Centers the content within the maximum width */
     text-align: justify;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 header#banner {
