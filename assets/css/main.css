@@ -395,3 +395,79 @@ main#content .bottom-image {
     height: auto;
     max-width: 200px; /* Set the maximum width */
 }
+
+/* ---------- Paper abstract toggle (research page) ---------- */
+:root { --accent: #014f9c; }
+
+.paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.6rem;
+    margin-top: 0.8rem;
+    font-size: 1.25rem;
+    text-align: left;
+}
+.paper-links a,
+.paper details > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.2em 0.8em;
+    border: 1px solid #d6d2ca;
+    border-radius: 999px;
+    color: #3a3f45;
+    text-decoration: none;
+    background: #fff;
+    margin-right: 0.6rem;
+    transition: border-color .15s, color .15s, background .15s;
+}
+.paper-links a:hover,
+.paper details > summary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* <details> holds the abstract; no JavaScript needed */
+.paper details,
+.paper details::details-content { display: contents; }
+.paper details:not([open]) .abstract { display: none; }
+.paper details > summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+.paper details > summary::-webkit-details-marker { display: none; }
+.paper details > summary::before {
+    content: "";
+    width: 0.42em;
+    height: 0.42em;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform .2s ease;
+}
+.paper details[open] > summary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+.paper details[open] > summary::before { transform: rotate(45deg) translateY(-2px); }
+
+.abstract {
+    flex-basis: 100%;   /* drops onto its own line under the buttons */
+    order: 99;          /* ...after any other links */
+    margin: 0.9rem 0 0.3rem;
+    padding: 2px 1.4rem;
+    border-left: 3px solid var(--accent);
+    background: #fff;
+    border-radius: 0 6px 6px 0;
+    line-height: 1.6;
+    color: #2b2f34;
+    animation: abstract-in .22s ease;
+}
+main#content .abstract p { margin: 0; }   /* keep the accent line as tall as the text */
+@keyframes abstract-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: none; }
+}
